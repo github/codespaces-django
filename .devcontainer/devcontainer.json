@@ -1,0 +1,4 @@
+{
+  "onCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": ""
+}

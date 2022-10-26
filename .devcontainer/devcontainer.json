@@ -1,4 +1,19 @@
 {
-  "onCreateCommand": "pip install -r requirements.txt",
-  "postCreateCommand": ""
+  "postAttachCommand": {
+    "server": "python manage.py runserver",
+  },
+  "portsAttributes": {
+    "8000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["ping/views.py"]
+    }
+  },
+  "onCreateCommand": "pip install -r requirements.txt && python manage.py migrate",
+  "postCreateCommand": "",
+  "hostRequirements": {"cpus": 4}
 }

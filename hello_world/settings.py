@@ -49,6 +49,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+X_FRAME_OPTIONS = "ALLOW-FROM preview.app.github.dev"
+
 ROOT_URLCONF = "hello_world.urls"
 
 TEMPLATES = [

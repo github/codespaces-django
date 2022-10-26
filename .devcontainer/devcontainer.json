@@ -15,5 +15,8 @@
   },
   "onCreateCommand": "pip install -r requirements.txt && python manage.py migrate",
   "postCreateCommand": "",
-  "hostRequirements": {"cpus": 4}
+  "hostRequirements": {"cpus": 4},
+  "extensions": [
+    "ms-python.python"
+  ]
 }

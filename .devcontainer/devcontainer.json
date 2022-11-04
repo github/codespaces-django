@@ -1,16 +1,18 @@
 {
-  "postAttachCommand": {
-    "server": "python manage.py runserver",
+  "hostRequirements": {
+    "cpus": 4
   },
-  "portsAttributes": {
-    "8000": {
-      "label": "Application",
-      "onAutoForward": "openPreview"
-    }
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "pip install -r requirements.txt && python manage.py migrate",
+  "postCreateCommand": "",
+  "postAttachCommand": {
+    "server": "python manage.py runserver"
   },
   "customizations": {
     "codespaces": {
-      "openFiles": ["ping/views.py"]
+      "openFiles": [
+        "ping/views.py"
+      ]
     },
     "vscode": {
       "extensions": [
@@ -18,7 +20,10 @@
       ]
     }
   },
-  "onCreateCommand": "pip install -r requirements.txt && python manage.py migrate",
-  "postCreateCommand": "",
-  "hostRequirements": {"cpus": 4}
+  "portsAttributes": {
+    "8000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  }
 }

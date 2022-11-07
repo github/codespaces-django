@@ -11,7 +11,7 @@
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "ping/views.py"
+        "hello_world/templates/index.html"
       ]
     },
     "vscode": {

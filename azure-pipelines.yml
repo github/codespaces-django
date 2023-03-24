@@ -1,10 +1,21 @@
 # Universal Windows Platform
+- task: AzureCLI@2
+  inputs:
+    scriptType: 'ps'
+    scriptLocation: 'scriptPath'
+    scriptPath: 
+    powerShellErrorActionPreference: 'continue'
+    addSpnToEnvironment: true
+    useGlobalConfig: true
+    failOnStandardError: true
+    powerShellIgnoreLASTEXITCODE: true
 - task: AzureCloudPowerShellDeployment@1
   inputs:
     EnableAdvancedStorageOptions: false
     ServiceName: 'Azure cloud'
-    CsPkg: 
-    slotName: 'Production'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'    slotName: 'Production'
     DeploymentLabel: '2.0'
     AllowUpgrade: true
 # Build a Universal Windows Platform project using Visual Studio.

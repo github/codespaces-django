@@ -1,10 +1,7 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(
-        request,
-        "index.html",
-        {
-            "title": "Django example",
-        },
-    )
+    context = {
+        "title": "Django example",
+    }
+    return render(request, "index.html", context)

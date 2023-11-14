@@ -10,6 +10,8 @@ To collect static files:
 ```python
 python manage.py collectstatic
 ```
+Create a `.env` file:
+Create a new file named `.env` at the root of your project. Copy the contents from `.env.example` and adjust them as needed.
 
 To run this application:
 

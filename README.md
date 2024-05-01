@@ -12,12 +12,13 @@ Everything you do here is contained within this one codespace. There is no repos
 pip install -r requirements.txt
 ```
 
-To collect static files:
+## To collect static files:
 
 ```python
 python manage.py collectstatic
 ```
-To run this application:
+
+## To run this application:
 
 ```python
 python manage.py runserver
